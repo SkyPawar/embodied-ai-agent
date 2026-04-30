@@ -1,0 +1,43 @@
+.voice-input {
+  display: flex;
+  justify-content: center;
+}
+
+.voice-button {
+  padding: 0.5rem 1rem;
+  background: rgba(236, 72, 153, 0.2);
+  color: #ec4899;
+  border: 1px solid #ec4899;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.voice-button:hover {
+  background: rgba(236, 72, 153, 0.3);
+  transform: translateY(-2px);
+}
+
+.voice-button.listening {
+  background: #ec4899;
+  color: white;
+  animation: pulse 0.5s infinite;
+}
+
+.voice-button .icon {
+  font-size: 1rem;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(236, 72, 153, 0);
+  }
+}
